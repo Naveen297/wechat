@@ -41,17 +41,17 @@ function App() {
 
   if (!isInRoom) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 flex items-center justify-center p-4">
-        <div className="max-w-2xl w-full">
-          <div className="text-center mb-8">
+      <div className="flex items-center justify-center min-h-screen p-4 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
+        <div className="w-full max-w-2xl">
+          <div className="mb-8 text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Heart className="text-pink-500" size={48} fill="currentColor" />
-              <h1 className="text-5xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text">
                 LoveConnect
               </h1>
               <Heart className="text-pink-500" size={48} fill="currentColor" />
             </div>
-            <p className="text-gray-600 text-lg">
+            <p className="text-lg text-gray-600">
               Video chat with real-time translation for you and your loved one
             </p>
             <div className="flex items-center justify-center gap-2 mt-4 text-sm text-gray-500">
@@ -62,9 +62,9 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-2xl p-8 space-y-6">
+          <div className="p-8 space-y-6 bg-white shadow-2xl rounded-2xl">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block mb-2 text-sm font-medium text-gray-700">
                 Choose your language
               </label>
               <div className="flex gap-4">
@@ -91,10 +91,10 @@ function App() {
               </div>
             </div>
 
-            <div className="border-t border-gray-200 pt-6">
+            <div className="pt-6 border-t border-gray-200">
               <button
                 onClick={createRoom}
-                className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-6 rounded-xl font-bold text-lg hover:from-pink-600 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="flex items-center justify-center w-full gap-2 px-6 py-4 text-lg font-bold text-white transition-all shadow-lg bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl hover:from-pink-600 hover:to-purple-700 hover:shadow-xl"
               >
                 <Video size={24} />
                 {isEnglish ? 'Create New Room' : 'Створити нову кімнату'}
@@ -106,14 +106,14 @@ function App() {
                 <div className="w-full border-t border-gray-300"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-white text-gray-500">
+                <span className="px-4 text-gray-500 bg-white">
                   {isEnglish ? 'or join existing room' : 'або приєднатися до існуючої кімнати'}
                 </span>
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block mb-2 text-sm font-medium text-gray-700">
                 {isEnglish ? 'Room ID' : 'ID кімнати'}
               </label>
               <div className="flex gap-2">
@@ -122,19 +122,19 @@ function App() {
                   value={roomId}
                   onChange={(e) => setRoomId(e.target.value)}
                   placeholder={isEnglish ? 'Enter room ID...' : 'Введіть ID кімнати...'}
-                  className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-pink-500 transition-all"
+                  className="flex-1 px-4 py-3 font-medium text-gray-900 transition-all bg-white border-2 border-gray-300 rounded-xl focus:outline-none focus:border-pink-500 placeholder:text-gray-400"
                 />
                 <button
                   onClick={joinRoom}
                   disabled={!roomId.trim()}
-                  className="bg-gray-800 text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  className="px-6 py-3 font-medium text-white transition-all bg-gray-800 rounded-xl hover:bg-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isEnglish ? 'Join' : 'Приєднатися'}
                 </button>
               </div>
             </div>
 
-            <div className="bg-pink-50 border-2 border-pink-200 rounded-xl p-4">
+            <div className="p-4 border-2 border-pink-200 bg-pink-50 rounded-xl">
               <p className="text-sm text-gray-700">
                 <strong className="text-pink-600">💝 {isEnglish ? 'How it works:' : 'Як це працює:'}</strong>
                 <br />
@@ -145,7 +145,7 @@ function App() {
             </div>
           </div>
 
-          <div className="text-center mt-6 text-gray-500 text-sm">
+          <div className="mt-6 text-sm text-center text-gray-500">
             <p>Made with {isEnglish ? 'love' : 'любов\'ю'} 💕</p>
           </div>
         </div>
@@ -155,16 +155,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
-      <div className="container mx-auto px-4 py-6 h-screen flex flex-col">
-        <div className="bg-white rounded-xl shadow-lg p-4 mb-4 flex items-center justify-between">
+      <div className="container flex flex-col h-screen px-4 py-6 mx-auto">
+        <div className="flex items-center justify-between p-4 mb-4 bg-white shadow-lg rounded-xl">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Heart className="text-pink-500" size={32} fill="currentColor" />
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold text-transparent bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text">
                 LoveConnect
               </h1>
             </div>
-            <div className="h-8 w-px bg-gray-300"></div>
+            <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center gap-2">
               <div className={`w-3 h-3 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-gray-300'}`}></div>
               <span className="text-sm text-gray-600">
@@ -176,13 +176,13 @@ function App() {
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="bg-gray-100 px-4 py-2 rounded-lg">
+            <div className="px-4 py-2 bg-gray-100 rounded-lg">
               <p className="text-xs text-gray-500">{isEnglish ? 'Room ID' : 'ID кімнати'}</p>
               <p className="font-mono text-sm font-medium text-gray-900">{roomId.substring(0, 20)}...</p>
             </div>
             <button
               onClick={copyRoomLink}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all flex items-center gap-2 font-medium shadow-md"
+              className="flex items-center gap-2 px-4 py-2 font-medium text-white transition-all rounded-lg shadow-md bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
             >
               {copied ? <Check size={18} /> : <Copy size={18} />}
               <span className="hidden sm:inline">{isEnglish ? 'Copy Link' : 'Копіювати'}</span>
@@ -190,8 +190,8 @@ function App() {
           </div>
         </div>
 
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 min-h-0">
-          <div className="lg:col-span-2 flex flex-col min-h-0">
+        <div className="grid flex-1 min-h-0 grid-cols-1 gap-4 lg:grid-cols-3">
+          <div className="flex flex-col min-h-0 lg:col-span-2">
             <VideoChat roomId={roomId} isEnglish={isEnglish} onPeerConnected={setIsConnected} />
           </div>
 
@@ -200,7 +200,7 @@ function App() {
           </div>
         </div>
 
-        <div className="text-center mt-4 text-gray-500 text-sm">
+        <div className="mt-4 text-sm text-center text-gray-500">
           <p>❤️ {isEnglish ? 'Connecting hearts across languages' : 'З\'єднуємо серця через мови'} ❤️</p>
         </div>
       </div>

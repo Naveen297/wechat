@@ -10,64 +10,19 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    VitePWA({
+VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: false // Disable service worker in development to prevent caching issues
+        enabled: false // Disable service worker in development
       },
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Vehicle Geo Detection',
-        short_name: 'VehicleGeo',
-        description: 'Vehicle Geo Detection Application',
-        theme_color: '#e31e24',
-        background_color: '#ffffff',
+        name: 'LoveConnect - Video Chat with Translation',
+        short_name: 'LoveConnect',
+        description: 'Video chat with real-time English-Ukrainian translation',
+        theme_color: '#ec4899',
+        background_color: '#fdf2f8',
         display: 'standalone',
-        orientation: 'portrait',
-        icons: [
-          {
-            src: '/icon-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/icon-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: '/icon-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
-        ]
-      },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg}'],
-        // Important: Exclude API calls from being cached by the service worker
-        navigateFallbackDenylist: [/^\/api/, /^http:\/\/localhost:8000/],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 365 days
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
-          {
-            // Explicitly bypass caching for backend API calls
-            urlPattern: /^http:\/\/localhost:8000\/.*/i,
-            handler: 'NetworkOnly'
-          }
-        ]
+        orientation: 'portrait'
       }
     })
   ],
@@ -97,7 +52,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 3000,
+    port: 5173,
     open: true,
   },
   build: {
