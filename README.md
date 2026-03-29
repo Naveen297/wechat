@@ -4,11 +4,13 @@ A beautiful video chat application with real-time English-Ukrainian translation,
 
 ## 🚀 Quick Deploy (100% FREE)
 
-Want to deploy this app? Check out:
-- **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** - 3-step deployment guide
+Want to deploy this app? Choose your style:
+- **[SUPER_EASY_DEPLOY.md](SUPER_EASY_DEPLOY.md)** - Just drag & drop! (3 minutes)
+- **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** - 3-step deployment with Git
 - **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - Detailed deployment instructions
 
-**Backend**: Render.com (Free) | **Frontend**: Netlify (Free) | **Total Cost**: $0/month
+**Backend**: Already deployed at `https://loveconnect-backend-dvou.onrender.com`
+**Frontend**: Deploy to Netlify (Free) | **Total Cost**: $0/month
 
 ---
 

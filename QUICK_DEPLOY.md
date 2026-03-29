@@ -25,17 +25,28 @@ git push -u origin main
 
 ## 3. Deploy Frontend (Netlify.com)
 
+### Option A: Drag & Drop (Easiest!)
+
+1. Build the app locally:
+   ```bash
+   npm run build
+   ```
+2. Go to https://netlify.com
+3. Drag and drop the `dist` folder to Netlify
+4. Done! **Share your frontend URL** with your girlfriend! 💕
+
+### Option B: Connect to GitHub
+
 1. Go to https://netlify.com
 2. Add new site → Import from Git
 3. Connect GitHub repo
 4. Settings:
    - Build command: `npm run build`
    - Publish directory: `dist`
-5. **Add Environment Variable**:
-   - Key: `VITE_BACKEND_URL`
-   - Value: `https://loveconnect-backend.onrender.com` (from step 2.6)
-6. Deploy!
-7. **Share your frontend URL** with your girlfriend! 💕
+5. Deploy!
+6. **Share your frontend URL** with your girlfriend! 💕
+
+**Note**: Backend URL is already hardcoded as `https://loveconnect-backend-dvou.onrender.com` - no environment variables needed!
 
 ## Done! 🎉
 
